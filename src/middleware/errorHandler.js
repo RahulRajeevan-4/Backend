@@ -16,18 +16,18 @@ export function errorHandler(err, req, res, next) {
   });
 }
 
-// export function handler404(err,req, res,next) {
-//     res.status(404).send({
-//         error: {
-//             "message": "Not Found"
-//         },
-//     });
+// export function handler404(req, res) {
+//   res.status(404).json({
+//     error: { message: "Not Found" },
+//   });
 // }
-
-export function handler404(req, res) {
-  res.status(404).json({
-    error: { message: "Not Found" },
-  });
+export function handler404(err,req, res,next) {
+    res.status(404).send({
+        error: {
+            "message": "Not Found"
+        },
+    });
 }
+
 
 
