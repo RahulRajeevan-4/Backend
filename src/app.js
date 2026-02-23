@@ -1,0 +1,13 @@
+import express from "express";
+
+const app = express();
+
+// Basic middleware (we’ll expand this soon)
+app.use(express.json());
+
+// Routes
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
+export default app;
